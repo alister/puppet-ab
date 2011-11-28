@@ -1,8 +1,5 @@
-class ack-grep { 'ack-grep':
+class ack_grep {
     package { "ack-grep":
     	ensure => installed
     }
 }
-
-class { 'ack-grep': }
-

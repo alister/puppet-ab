@@ -1,4 +1,8 @@
-node oberth {
+node base {
    include ntp
-   include ack-grep
+   include ack_grep
+   include joe
+}
+
+node oberth inherits base {
 }

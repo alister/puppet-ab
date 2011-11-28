@@ -1,4 +1,4 @@
-class ntp {
+class ntp { 
     package { "ntp":
     	ensure => installed
     }
@@ -6,3 +6,5 @@ class ntp {
     	ensure => running,
     }
 }
+
+class { 'ntp': }

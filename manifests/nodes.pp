@@ -1,5 +1,6 @@
 node base {
    include ntp
+   include timezone
    include joe
    include git
    include pigz

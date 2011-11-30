@@ -1,26 +1,26 @@
 node base {
-   include ntp
-   include timezone
-   include joe
-   include git
-   include pigz
+  include ntp
+  include timezone
+  include joe
+  include git
+  include pigz
 }
 
 node development inherits base {
-   include ack_grep
-   include build
-   include python
-   include rake 
+  include ack_grep
+  include build
+  include python
+  include rake
 }
 
 node serverQueue inherits base {
-    #beanstalkd 
+  #beanstalkd
 }
 node serverMemcache inherits base {
-    #include memcached
+  #include memcached
 }
 node serverWorkers inherits base {
-    #include supervisord
+  #include supervisord
 }
 
 node oberth inherits base {

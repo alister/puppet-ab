@@ -1,5 +1,3 @@
-class rake { 
-    package { "rake":
-    	ensure => installed
-    }
+class rake {
+  package { 'rake': ensure => installed }
 }

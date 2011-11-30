@@ -1,5 +1,3 @@
-class git { 
-    package { "git-core":
-    	ensure => installed
-    }
+class git {
+  package { 'git-core': ensure => installed }
 }

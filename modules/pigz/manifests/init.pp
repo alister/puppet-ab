@@ -1,5 +1,3 @@
-class pigz { 
-    package { "pigz":
-    	ensure => installed
-    }
+class pigz {
+  package { 'pigz': ensure => installed }
 }

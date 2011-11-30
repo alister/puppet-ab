@@ -1,5 +1,3 @@
-class pigz::remove { 
-    package { "pigz":
-    	ensure => purged
-    }
+class pigz::remove {
+  package { 'pigz': ensure => purged }
 }

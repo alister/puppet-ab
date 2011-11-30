@@ -1,3 +1,8 @@
+require 'rubygems'
+
+# #https://github.com/rodjek/puppet-lint
+require 'puppet-lint/tasks/puppet-lint'
+
 PUPPETMASTER = 'cookbook'
 SSH = 'ssh -t -A'
 

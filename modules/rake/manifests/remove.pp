@@ -1,5 +1,3 @@
-class rake::remove { 
-    package { "rake":
-    	ensure => purged
-    }
+class rake::remove {
+  package { 'rake': ensure => purged  }
 }

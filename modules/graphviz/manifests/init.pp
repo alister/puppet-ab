@@ -1,15 +1,15 @@
-class joe {
-    # This class sets up the joe editor
+class graphviz {
+    # This class sets up the graphviz package
     #
     # ==Actions
-    # Install a package, Joes Own Editor.
+    # Install graphviz
     #
     # ==Requires
     # * none
     #
     # - could be: "Package["puppet"]"
     #
-    package { "joe":
+    package { "graphviz":
     	ensure => installed
     }
 }

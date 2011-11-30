@@ -31,3 +31,17 @@ task :noop => [:deploy] do
     client = ENV['CLIENT']
     sh "#{SSH} #{client} 'sudo puppet agent --test --noop'"
 end
+
+task :docs do
+    sh "puppet doc --all --outputdir=/var/www/puppet --mode rdoc \
+                 --manifestdir=/etc/puppet/manifests/"
+end
+
+# make .png's of the --graph. 
+# @todo replace `hostname` with ENV[SERVER], defaulting to `hostname`
+task :graphs do
+    sh "puppet agent --test --graph --server=`hostname`"
+    sh "dot -Tpng -o /var/www/puppet/resources.png              /var/lib/puppet/state/graphs/resources.dot"
+    sh "dot -Tpng -o /var/www/puppet/relationships.png          /var/lib/puppet/state/graphs/relationships.dot"
+    sh "dot -Tpng -o /var/www/puppet/expanded_relationships.png /var/lib/puppet/state/graphs/expanded_relationships.dot"
+end

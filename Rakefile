@@ -1,6 +1,6 @@
 require 'rubygems'
 
-# #https://github.com/rodjek/puppet-lint
+# #https://github.com/rodjek/puppet-lint -- 'rake lint'
 require 'puppet-lint/tasks/puppet-lint'
 
 PUPPETMASTER = 'cookbook'

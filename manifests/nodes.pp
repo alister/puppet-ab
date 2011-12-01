@@ -1,9 +1,6 @@
 node base {
-  include ntp
+  include basesw   # a number of the most basic packages
   include timezone
-  include joe
-  include git
-  include pigz
 }
 
 node development inherits base {

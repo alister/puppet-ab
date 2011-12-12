@@ -23,6 +23,6 @@ node serverWorkers inherits base {
 node oberth inherits base {
 }
 
-
 node puppetc1 inherits base {
 }
+

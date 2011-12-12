@@ -5,6 +5,7 @@ node base {
   include app::virtual-packages
   include user::virtual
   include user::sysadmins
+  include dns::hosts
 }
 
 node development inherits base {

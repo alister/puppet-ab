@@ -1,6 +1,8 @@
 node base {
   include basesw   # a number of the most basic packages
   include timezone
+
+  include app::virtual-packages
 }
 
 node development inherits base {
@@ -8,10 +10,11 @@ node development inherits base {
   include build
   include python
   include rake
+  include app::phpmyadmin
 }
 
 node serverQueue inherits base {
-  #beanstalkd
+  #include beanstalkd
 }
 node serverMemcache inherits base {
   #include memcached
@@ -20,9 +23,11 @@ node serverWorkers inherits base {
   #include supervisord
 }
 
-node oberth inherits base {
+node oberth inherits development {
+  notify { 'Server: Oberth': }
 }
 
 node puppetc1 inherits base {
+  notify { 'Server: Puppet1': }
 }
 

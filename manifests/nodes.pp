@@ -3,6 +3,8 @@ node base {
   include timezone
 
   include app::virtual-packages
+  include user::virtual
+  include user::sysadmins
 }
 
 node development inherits base {
@@ -24,6 +26,8 @@ node serverWorkers inherits base {
 }
 
 node oberth inherits development {
+  include user::developers
+
   notify { 'Server: Oberth': }
 }
 

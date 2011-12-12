@@ -13,4 +13,22 @@ class user::virtual
 
   # for manually installed beanstalkd
   #@user { 'beanstalkd': }
+
+
+  define ssh_user( $key )
+  {
+    user { $name:
+      ensure     => present,
+      managehome => true,
+    }
+    ssh_authorized_key { "${name}_key":
+      key  => $key,
+      type => 'ssh-rsa',
+      user => $name,
+    }
+  }
+  #@ssh_user { "alister":
+  #  key => "AA-----ssh-rsa-key--------....3jw==",
+  #}
+
 }

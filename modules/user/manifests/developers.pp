@@ -2,7 +2,9 @@
 #
 class user::developers
 {
-  realize( User['alister'],
-           # User[''],   more if required
-  )
+  search User::Virtual
+
+  #realize( Ssh_User['alister'],
+  #         # User[''],   more if required
+  #)
 }

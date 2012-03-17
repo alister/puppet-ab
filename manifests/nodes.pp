@@ -13,8 +13,8 @@ node development inherits base {
   include build
   include python
   include rake
-  include app::phpmyadmin
-  include pandoc
+  #include app::phpmyadmin
+  #include pandoc
 }
 
 node serverQueue inherits base {
@@ -29,7 +29,11 @@ node serverWorkers inherits base {
 
 node oberth inherits development {
   include user::developers
+  notify { 'Server: Oberth': }
+}
 
+node ubuntu inherits development {
+  include user::developers
   notify { 'Server: Oberth': }
 }
 

@@ -1,0 +1,13 @@
+## Installing Git/Puppet and bring up a Puppet-ised machine
+
+sudo apt-get install git-core puppet
+git clone git@github.com:alister/puppet-ab.git
+
+cp /media/*/ssh/amvdev-remote.* ~/.ssh/
+cd ~/.ssh/
+ln -s amvdev-remote.openssh.key id_rsa
+chmod 600 *
+cd -
+git clone git@github.com:alister/puppet-ab.git
+clear;./update.sh 
+# aka: puppet  apply --modulepath=modules --onetime -v --no-daemonize --debug modules/site.pp 

@@ -1,5 +1,6 @@
 node base {
   include basesw   # a number of the most basic packages
+  include basesw::zsh
   include timezone
 
   include app::virtual-packages

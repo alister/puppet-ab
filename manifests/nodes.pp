@@ -1,13 +1,16 @@
 node base {
   include basesw   # a number of the most basic packages
   include basesw::zsh
-  include timezone
-
+  
+  class { 'timezone':
+    zone => 'Europe/London'
+  }
   include app::virtual-packages
   include user::virtual
   include user::sysadmins
   include dns::hosts
 }
+
 
 node development inherits base {
   include ack_grep

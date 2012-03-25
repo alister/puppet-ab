@@ -1,4 +1,3 @@
-* Git setup, inc username, email, and config (eg: 'st')
 * Keychain (ssh)
 * Upgrade to Ruby 1.9.2?
 * Install PHP 5.4
@@ -19,3 +18,7 @@
 * curl, wget
 * tofrodos (convert line endings)
 * rdate, ntpd
+
+## DONE
+* Git setup, inc username, email, and config (eg: 'st')
+  * use the dotfiles to configure

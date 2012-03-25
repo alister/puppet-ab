@@ -16,6 +16,8 @@ node development inherits base {
   include rake
   #include app::phpmyadmin
   #include pandoc
+
+  include php
 }
 
 node serverQueue inherits base {

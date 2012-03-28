@@ -21,6 +21,7 @@ node development inherits base {
   #include pandoc
 
   include basesw::dev
+  include phpqatools
   include php
 }
 

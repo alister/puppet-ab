@@ -1,7 +1,7 @@
 node base {
   include basesw   # a number of the most basic packages
   include basesw::zsh
-  
+
   class { 'timezone':
     zone => 'Europe/London'
   }
@@ -20,6 +20,7 @@ node development inherits base {
   #include app::phpmyadmin
   #include pandoc
 
+  include basesw::dev
   include php
 }
 

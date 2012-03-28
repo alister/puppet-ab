@@ -2,9 +2,7 @@
 #
 class user::sysadmins
 {
-   search User::Virtual
+  search User::Virtual
 
-#  realize( Ssh_User['alister'],
-#           # User[''],   more if required
-#  )
+  realize( Ssh_User['alister'] )
 }

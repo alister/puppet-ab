@@ -4,7 +4,7 @@ class basesw::dev {
 
   # Ruby gems we want installed
   package { ['guard', 'guard-phpunit', 'guard-phpcs',
-    'puppet-lint']:
+    'guard-shell', 'puppet-lint']:
 
     ensure   => installed,
     provider => 'gem',

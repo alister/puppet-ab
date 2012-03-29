@@ -20,9 +20,19 @@ node development inherits base {
   #include app::phpmyadmin
   #include pandoc
 
+#  apt::source { 'ppa-ondrej-php5':
+#    location          => 'http://ppa.launchpad.net/ondrej/php5/ubuntu',
+#    release           => 'precise',
+#    repos             => 'main',
+#    required_packages => 'ubuntu-keyring ubuntu-extras-keyring',
+#    key               => 'E5267A6C',
+#    key_server        => 'keyserver.ubuntu.com',
+#    pin               => '-10',
+#    include_src       => false
+#  }
   include basesw::dev
-  include phpqatools
   include php
+  include phpqatools
 }
 
 node serverQueue inherits base {

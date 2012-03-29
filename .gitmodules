@@ -21,7 +21,7 @@
 	url = https://github.com/puppetlabs/puppetlabs-stdlib.git
 [submodule "modules/dropbox"]
 	path = modules/dropbox
-	url = https://github.com/cwarden/puppet-dropbox.git
+	url = https://github.com/alister/puppet-dropbox.git
 [submodule "modules/apache"]
 	path = modules/apache
 	url = https://github.com/puppetlabs/puppetlabs-apache.git

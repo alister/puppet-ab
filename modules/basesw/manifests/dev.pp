@@ -11,4 +11,31 @@ class basesw::dev {
     require  => Package[[rubygems]]
   }
 
+  include build
+
+  #include app::phpmyadmin
+  #include pandoc
+  include dropbox  # @todo don't install/config. For that - "dropbox start -i"
+
+  # keeps reinstalling different versions...
+  #include phpqatools
+
+  # hack since I'm having trouble with apt::ppa
+  exec { "add-apt-repository-ppa:webupd8team/sublime-text-2":
+    command => "/usr/bin/add-apt-repository ppa:webupd8team/sublime-text-2",
+    creates => "/etc/apt/sources.list.d/webupd8team-sublime-text-2-precise.list",
+  }
+  package { 'sublime-text-2-dev': } # or -beta
+ 
+  apt::source { 'ppa-ondrej-php5':
+    location          => 'http://ppa.launchpad.net/ondrej/php5/ubuntu',
+    #release           => 'precise',
+    #repos             => 'main',
+    required_packages => 'ubuntu-keyring ubuntu-extras-keyring',
+    key               => 'E5267A6C',
+    key_server        => 'keyserver.ubuntu.com',
+    #include_src       => false,
+    #creates           => '/etc/apt/sources.list.d/wppa-ondrej-php5.list',
+  }
+
 }

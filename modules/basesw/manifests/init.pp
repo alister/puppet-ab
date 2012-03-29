@@ -9,8 +9,9 @@ class basesw {
   #
   # - could be: "Package['puppet']"
   #
-  package { [ 'joe', 'git-core', 'pigz',
-    'zsh', 'openssh-server', 'rdate' ]:
+  $pkgs = [ 'joe', 'git-core', 'pigz', 'zsh', 'openssh-server', 
+    'rdate', 'build-essential', 'rsync', 'curl', 'wget' ]
+  package { $pkgs:
     ensure => installed,
   }
 

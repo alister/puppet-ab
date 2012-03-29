@@ -50,3 +50,8 @@ task :graphs do
     sh "dot -Tpng -o /var/www/puppet/relationships.png          /var/lib/puppet/state/graphs/relationships.dot"
     sh "dot -Tpng -o /var/www/puppet/expanded_relationships.png /var/lib/puppet/state/graphs/expanded_relationships.dot"
 end
+
+# A simple Rake task to delete backup files
+task :clean do
+    Dir['*~','**/*~'].each {|fn| rm fn rescue nil}
+end

@@ -15,7 +15,8 @@ class basesw::dev {
 
   #include app::phpmyadmin
   #include pandoc
-  include dropbox  # @todo don't install/config. For that - "dropbox start -i"
+  include dropbox::cli
+     # @todo don't install/config. For that - "dropbox start -i"
 
   # keeps reinstalling different versions...
   #include phpqatools

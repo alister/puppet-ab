@@ -27,12 +27,18 @@ node development inherits base {
 #    required_packages => 'ubuntu-keyring ubuntu-extras-keyring',
 #    key               => 'E5267A6C',
 #    key_server        => 'keyserver.ubuntu.com',
-#    pin               => '-10',
 #    include_src       => false
 #  }
   include basesw::dev
   include php
   include phpqatools
+
+  # hack since I'm having trouble with apt::ppa
+  exec { "add-apt-repository-ppa:webupd8team/sublime-text-2":
+    command => "/usr/bin/add-apt-repository ppa:webupd8team/sublime-text-2",
+    creates => "/etc/apt/sources.list.d/sublime-text-2",
+  }
+  package { 'sublime-text-2-dev': } # or -beta
 }
 
 node serverQueue inherits base {

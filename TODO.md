@@ -1,24 +1,26 @@
 * Keychain (ssh)
 * Upgrade to Ruby 1.9.2?
-* Install PHP 5.4
+* Install PHP
   * Option for Apache/mod_php or Nginx/PHP-FPM
-* Mysql
-* MongoDB (with php support)
+  * 5.4 from new PPA?
 * php-apc, memcached, php-memcached, xdebug
 * pear php-unit (full)
-* editor: SublimeText2
+* Mysql
+* MongoDB (with php support)
+* SublimeText2 plugins (git-based)
 * screen/byobu (or tmux?)
 * local DNS control? (djbdns or other, with static IP)
-* Subversion, git-svn
-* rsync
+* Subversion, git-svn??
 * dropbox?
-* build-essentials?
 * apg (password generator)
 * figlet
-* curl, wget
 * tofrodos (convert line endings)
-* rdate, ntpd
+* get the latest ack-grep from http://github.com/petdance/ack
 
 ## DONE
 * Git setup, inc username, email, and config (eg: 'st')
   * use the dotfiles to configure
+* editor: SublimeText2, with some plugins (git-based)
+* build-essentials?
+* rsync
+* curl, wget

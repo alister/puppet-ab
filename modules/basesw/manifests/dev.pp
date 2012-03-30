@@ -4,7 +4,10 @@ class basesw::dev {
 
   # Ruby gems we want installed
   $devgems = ['puppet-lint', 'puppet-module',
-    'guard', 'guard-phpunit', 'guard-phpcs', 'guard-shell' ]
+    'guard', 'guard-phpunit', 'guard-phpcs',
+    'guard-shell', 'guard-puppet-lint',
+    'jeweler', 'bundler',
+    ]
   package { $devgems:
     ensure   => installed,
     provider => 'gem',
@@ -34,10 +37,10 @@ class basesw::dev {
     key               => 'E5267A6C',
     key_server        => 'keyserver.ubuntu.com',
     #include_src      => false,
-    #creates          => '/etc/apt/sources.list.d/wppa-ondrej-php5.list',
   }
 
-  # not yet supported on php5.4    , 'php5-memcached'
+  # not yet supported on php5.4 in ppa-ondrej-php5
+  #, 'php5-memcached'
   $peclDebs = ['php-apc', 'php5-xdebug' ]
   package { $peclDebs:
     ensure   => installed,

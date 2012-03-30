@@ -1,14 +1,14 @@
+# This class sets up the basic software for every server
+#
+# ==Actions
+# Install several packages
+#
+# ==Requires
+# * none
+#
+# - could be: "Package['puppet']"
+#
 class basesw {
-  # This class sets up the basic software for every server
-  #
-  # ==Actions
-  # Install several packages
-  #
-  # ==Requires
-  # * none
-  #
-  # - could be: "Package['puppet']"
-  #
   $pkgs = [ 'joe', 'git-core', 'pigz', 'zsh', 'openssh-server',
     'rdate', 'build-essential', 'rsync', 'curl', 'wget' ]
   package { $pkgs:

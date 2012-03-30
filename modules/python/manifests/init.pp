@@ -1,5 +1,5 @@
 class python {
-  package { 'python-dev': ensure => installed }
+  package { 'python-dev': ensure        => installed }
   package { 'python-setuptools': ensure => installed }
 
   file {
@@ -30,7 +30,7 @@ class python {
     $pymod_record = "/var/puppet/python/modules/${name}.files"
 
     $req_or_url = $version ? {
-      '' => $name,
+      ''      => $name,
       default => "\"${name}==${version}\""
     }
 
@@ -45,5 +45,5 @@ class python {
   }
 
   pymod { 'pyparsing': name => pyparsing }
-  pymod { 'pytz': name => pytz }
+  pymod { 'pytz':      name => pytz }
 }

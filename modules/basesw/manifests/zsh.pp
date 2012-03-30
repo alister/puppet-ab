@@ -14,7 +14,7 @@ class basesw::zsh {
     command => 'chsh -s /bin/zsh alister',
     require => Package['zsh'],
     onlyif  => 'grep ^alister:x /etc/passwd | grep -c bin/bash'
-    # `grep alister /etc/passwd | cut -d : -f 7` => "/bin/zsh"
+    # `grep alister /etc/passwd | cut -d : -f 7` >>> "/bin/zsh"
   }
 
 }

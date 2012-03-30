@@ -1,5 +1,5 @@
 class ack_grep::remove {
-    package { 'ack-grep':
-        ensure => purged
-    }
+  package { 'ack-grep':
+    ensure => purged
+  }
 }

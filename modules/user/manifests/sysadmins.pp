@@ -4,5 +4,5 @@ class user::sysadmins
 {
   search User::Virtual
 
-  realize( Ssh_User['alister'] )
+  realize( User::Virtual::Ssh_user['alister'] )
 }

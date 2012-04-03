@@ -41,7 +41,7 @@ class basesw::dev {
 
   # not yet supported on php5.4 in ppa-ondrej-php5
   #, 'php5-memcached'
-  $peclDebs = ['php-apc', 'php5-xdebug' ]
+  $peclDebs = ['php-apc', 'php5-xdebug', 'php5-gd', ]
   package { $peclDebs:
     ensure   => installed,
   }

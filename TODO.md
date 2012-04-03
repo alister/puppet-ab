@@ -1,9 +1,8 @@
-* Keychain (ssh)
 * Upgrade to Ruby 1.9.2?
 * Install PHP
   * Option for Apache/mod_php or Nginx/PHP-FPM
   * 5.4 from new PPA?
-* php-apc, memcached, php-memcached, xdebug
+* memcached, php-memcached
 * pear php-unit (full)
 * Mysql
 * MongoDB (with php support)
@@ -11,11 +10,11 @@
 * screen/byobu (or tmux?)
 * local DNS control? (djbdns or other, with static IP)
 * Subversion, git-svn??
-* dropbox?
 * apg (password generator)
 * figlet
 * tofrodos (convert line endings)
 * get the latest ack-grep from http://github.com/petdance/ack
+* work with dotfiles to create oh-my-zsh config?
 
 ## DONE
 * Git setup, inc username, email, and config (eg: 'st')
@@ -24,3 +23,5 @@
 * build-essentials?
 * rsync
 * curl, wget
+* dropbox
+* Keychain (ssh-agent via oh-my-zsh)

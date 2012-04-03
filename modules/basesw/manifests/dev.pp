@@ -1,7 +1,6 @@
 class basesw::dev {
 
-  package { 'rubygems': }
-
+  package { 'rubygems': }   #first, make sure rubygems is installed
   # Ruby gems we want installed
   $devgems = ['puppet-lint', 'puppet-module',
     'guard', 'guard-phpunit', 'guard-phpcs',
@@ -22,12 +21,7 @@ class basesw::dev {
   # keeps reinstalling different versions...
   #include phpqatools
 
-  # hack since I'm having trouble with apt::ppa
-  exec { 'add-apt-repository-ppa:webupd8team/sublime-text-2':
-    command => '/usr/bin/add-apt-repository ppa:webupd8team/sublime-text-2',
-    creates => '/etc/apt/sources.list.d/webupd8team-sublime-text-2-precise.list',
-  }
-  package { 'sublime-text-2-dev': } # or -beta
+  include basesw::sublime2
 
   apt::source { 'ppa-ondrej-php5':
     location          => 'http://ppa.launchpad.net/ondrej/php5/ubuntu',

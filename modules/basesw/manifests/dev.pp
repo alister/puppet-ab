@@ -21,7 +21,7 @@ class basesw::dev {
   # keeps reinstalling different versions...
   #include phpqatools
 
-  include basesw::sublime2
+  include basesw::alister::sublimetext2  # my own plugins...
 
   apt::source { 'ppa-ondrej-php5':
     location          => 'http://ppa.launchpad.net/ondrej/php5/ubuntu',

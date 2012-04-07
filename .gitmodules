@@ -25,3 +25,6 @@
 [submodule "modules/dropbox"]
 	path = modules/dropbox
 	url = https://github.com/alister/puppet-dropbox.git
+[submodule "modules/sublimetext2"]
+	path = modules/sublimetext2
+	url = git@github.com:alister/puppet-sublimetext2.git

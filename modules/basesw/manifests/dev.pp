@@ -1,5 +1,7 @@
 class basesw::dev {
 
+  package { 'zsync': ensure => latest }
+
   package { 'rubygems': }   #first, make sure rubygems is installed
   # Ruby gems we want installed
   $devgems = ['puppet-lint', 'puppet-module',

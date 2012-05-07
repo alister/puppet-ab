@@ -25,24 +25,23 @@ class basesw::dev {
 
   include basesw::alister::sublimetext2  # my own plugins...
 
-  apt::source { 'ppa-ondrej-php5':
-    location          => 'http://ppa.launchpad.net/ondrej/php5/ubuntu',
-    #release          => 'precise',
-    #repos            => 'main',
-    required_packages => 'ubuntu-keyring ubuntu-extras-keyring',
-    key               => 'E5267A6C',
-    key_server        => 'keyserver.ubuntu.com',
-    #include_src      => false,
-  }
+  # apt::source { 'ppa-ondrej-php5':
+  #   location          => 'http://ppa.launchpad.net/ondrej/php5/ubuntu',
+  #   #release          => 'precise',
+  #   #repos            => 'main',
+  #   required_packages => 'ubuntu-keyring ubuntu-extras-keyring',
+  #   key               => 'E5267A6C',
+  #   key_server        => 'keyserver.ubuntu.com',
+  #   #include_src      => false,
+  # }
 
   # not yet supported on php5.4 in ppa-ondrej-php5
   #, 'php5-memcached'
-  $peclDebs = ['php-apc', 'php5-xdebug', 'php5-gd', ]
+  $peclDebs = ['php-apc', 'php5-xdebug', 'php5-gd', 'php5-sqlite']
   package { $peclDebs:
     ensure   => installed,
   }
 
   #include app::phpmyadmin
   #include pandoc
-
 }

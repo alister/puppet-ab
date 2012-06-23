@@ -1,5 +1,6 @@
 node ubuntu inherits development {
   include user::developers
-  notify { 'Server: Oberth': }
+
+  include basesw::alister::sublimetext2  # my own plugins...
 }
 

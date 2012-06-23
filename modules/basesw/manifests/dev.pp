@@ -23,8 +23,6 @@ class basesw::dev {
   # keeps reinstalling different versions...
   #include phpqatools
 
-  include basesw::alister::sublimetext2  # my own plugins...
-
   # apt::source { 'ppa-ondrej-php5':
   #   location          => 'http://ppa.launchpad.net/ondrej/php5/ubuntu',
   #   #release          => 'precise',
@@ -34,6 +32,10 @@ class basesw::dev {
   #   key_server        => 'keyserver.ubuntu.com',
   #   #include_src      => false,
   # }
+
+  package { 'jwhois':
+    ensure => installed,
+  }
 
   # not yet supported on php5.4 in ppa-ondrej-php5
   #, 'php5-memcached'

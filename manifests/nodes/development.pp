@@ -5,5 +5,5 @@ node development inherits base {
   include ack_grep
   include python
   include rake
-}
 
+}

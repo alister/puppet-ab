@@ -28,3 +28,6 @@
 [submodule "modules/sublimetext2"]
 	path = modules/sublimetext2
 	url = git@github.com:alister/puppet-sublimetext2.git
+[submodule "modules/composer"]
+	path = modules/composer
+	url = git://github.com/dazz/puppet-composer.git

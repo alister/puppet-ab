@@ -1,6 +1,7 @@
 class basesw::dev {
 
-  package { 'zsync': ensure => latest }
+  $genericDebs = [ 'zsync', 'dos2unix' ]
+  package { $genericDebs: ensure => latest }
 
   package { 'rubygems': }   #first, make sure rubygems is installed
   # Ruby gems we want installed
@@ -22,6 +23,7 @@ class basesw::dev {
 
   # keeps reinstalling different versions...
   #include phpqatools
+  include composer   # PHP: http://getcomposer.org/
 
   # apt::source { 'ppa-ondrej-php5':
   #   location          => 'http://ppa.launchpad.net/ondrej/php5/ubuntu',

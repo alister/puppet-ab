@@ -31,3 +31,6 @@
 [submodule "modules/composer"]
 	path = modules/composer
 	url = git://github.com/dazz/puppet-composer.git
+[submodule "modules/augeas"]
+	path = modules/augeas
+	url = git://github.com/camptocamp/puppet-augeas.git

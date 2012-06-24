@@ -23,7 +23,11 @@ class basesw::dev {
 
   # keeps reinstalling different versions...
   #include phpqatools
-  include composer   # PHP: http://getcomposer.org/
+
+  # download composer,  PHP: http://getcomposer.org/
+  class { 'composer': 
+    targetdir => '/home/alister/bin/'
+  }
 
   # apt::source { 'ppa-ondrej-php5':
   #   location          => 'http://ppa.launchpad.net/ondrej/php5/ubuntu',

@@ -10,7 +10,7 @@
 #
 class basesw {
   $pkgs = [ 'joe', 'git-core', 'pigz', 'zsh', 'openssh-server',
-    'rdate', 'build-essential', 'rsync', 'curl', 'wget' ]
+    'rdate', 'build-essential', 'rsync', 'curl', 'wget', 'python-gpgme' ]
   package { $pkgs:
     ensure => installed,
   }

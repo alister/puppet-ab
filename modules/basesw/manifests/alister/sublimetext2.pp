@@ -42,9 +42,9 @@ class basesw::alister::sublimetext2 {
   sublimetext2::plugin { 'Rake':
     gitUrl => 'https://github.com/SublimeText/Rake.git'
   }
-  sublimetext2::plugin { 'PuppetText':
-    gitUrl => 'https://github.com/arioch/sublime-text-puppet.git'
-  }
+  #sublimetext2::plugin { 'PuppetText':
+  #  gitUrl => 'https://github.com/arioch/sublime-text-puppet.git'
+  #}
   sublimetext2::plugin { 'SublimeLinter':
     gitUrl => 'https://github.com/Kronuz/SublimeLinter'
   }

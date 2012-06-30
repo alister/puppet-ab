@@ -1,6 +1,6 @@
 class basesw::dev {
 
-  $genericDebs = [ 'zsync', 'dos2unix' ]
+  $genericDebs = [ 'zsync', 'dos2unix', 'jwhois', 'libwww-perl' ]
   package { $genericDebs: ensure => latest }
 
   package { 'rubygems': }   #first, make sure rubygems is installed
@@ -25,29 +25,15 @@ class basesw::dev {
   #include phpqatools
 
   # download composer,  PHP: http://getcomposer.org/
-  class { 'composer': 
-    targetdir => '/home/alister/bin/'
-  }
-
-  # apt::source { 'ppa-ondrej-php5':
-  #   location          => 'http://ppa.launchpad.net/ondrej/php5/ubuntu',
-  #   #release          => 'precise',
-  #   #repos            => 'main',
-  #   required_packages => 'ubuntu-keyring ubuntu-extras-keyring',
-  #   key               => 'E5267A6C',
-  #   key_server        => 'keyserver.ubuntu.com',
-  #   #include_src      => false,
-  # }
-
-  package { 'jwhois':
-    ensure => installed,
+  class { 'composer':
+    targetdir => '/usr/local/bin/'
   }
 
   # not yet supported on php5.4 in ppa-ondrej-php5
   #, 'php5-memcached'
-  $peclDebs = ['php-apc', 'php5-xdebug', 'php5-gd', 'php5-sqlite']
+  $peclDebs = ['php-apc', 'php5-xdebug', 'php5-gd', 'php5-sqlite', 'php5-cli']
   package { $peclDebs:
-    ensure   => installed,
+    ensure => installed,
   }
 
   #include app::phpmyadmin

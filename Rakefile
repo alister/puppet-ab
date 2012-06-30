@@ -2,6 +2,8 @@ require 'rubygems'
 
 # #https://github.com/rodjek/puppet-lint -- 'rake lint'
 require 'puppet-lint/tasks/puppet-lint'
+PuppetLint.configuration.send("disable_80chars")
+PuppetLint.configuration.log_format = "%{path}:\t%{linenumber}: %{check} (%{KIND}): %{message}"
 
 PUPPETMASTER = 'cookbook'
 SSH = 'ssh -t -A'

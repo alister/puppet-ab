@@ -1,6 +1,6 @@
 class basesw::dev {
 
-  $genericDebs = [ 'zsync', 'dos2unix', 'jwhois', 'libwww-perl' ]
+  $genericDebs = [ 'zsync', 'dos2unix', 'jwhois', 'libwww-perl', 'mytop' ]
   package { $genericDebs: ensure => latest }
 
   package { 'rubygems': }   #first, make sure rubygems is installed
@@ -38,4 +38,12 @@ class basesw::dev {
 
   #include app::phpmyadmin
   #include pandoc
+
+  class { mongodb:
+    # Nodes are in a replica set
+    #replSet => "example_set_name",
+    # Increase number of available mongodb connections
+    ulimit_nofile => 20000,
+    #mongod_add_options => ['smallfiles', 'oplogSize 10', 'directoryperdb']
+  }
 }

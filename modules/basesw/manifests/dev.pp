@@ -1,6 +1,6 @@
 class basesw::dev {
 
-  $genericDebs = [ 'zsync', 'dos2unix', 'jwhois', 'libwww-perl', 'mytop' ]
+  $genericDebs = [ 'zsync', 'dos2unix', 'jwhois', 'libwww-perl', 'mytop', 'subversion' ]
   package { $genericDebs: ensure => latest }
 
   package { 'rubygems': }   #first, make sure rubygems is installed
@@ -31,7 +31,7 @@ class basesw::dev {
 
   # not yet supported on php5.4 in ppa-ondrej-php5
   #, 'php5-memcached'
-  $peclDebs = ['php-apc', 'php5-xdebug', 'php5-gd', 'php5-sqlite', 'php5-cli']
+  $peclDebs = ['php-apc', 'php5-xdebug', 'php5-gd', 'php5-sqlite', 'php5-cli', 'php-pear']
   package { $peclDebs:
     ensure => installed,
   }

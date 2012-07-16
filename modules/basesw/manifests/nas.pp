@@ -16,11 +16,11 @@ class basesw::nas {
   package { [ 'fortunes-debian-hints', 'fortunes-ubuntu-server']:
     ensure => purged
   }
-  
+
   # these are listed as Alias's in the portal.alister apache.conf repo
   $phpPkgs = [ 'phpsysinfo', 'phpmyadmin' ]
   package { $phpPkgs:
-    ensure => installed,
+    ensure  => installed,
     #notify => Service['apache']
   }
 

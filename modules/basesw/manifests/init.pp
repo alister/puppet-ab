@@ -11,7 +11,7 @@
 class basesw {
   $pkgs = [ 'joe', 'git-core', 'pigz', 'zsh', 'openssh-server',
     'rdate', 'build-essential', 'rsync', 'curl', 'wget', 'python-gpgme',
-    'sqlite3', 'python-software-properties', 'denyhosts' ]
+    'sqlite3', 'python-software-properties', 'denyhosts', ]
   package { $pkgs:
     ensure => installed,
   }

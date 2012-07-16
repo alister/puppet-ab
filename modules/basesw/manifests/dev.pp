@@ -39,11 +39,11 @@ class basesw::dev {
   #include app::phpmyadmin
   #include pandoc
 
-  class { mongodb:
-    # Nodes are in a replica set
-    #replSet => "example_set_name",
-    # Increase number of available mongodb connections
-    ulimit_nofile => 20000,
-    #mongod_add_options => ['smallfiles', 'oplogSize 10', 'directoryperdb']
-  }
+  #class { mongodb:
+  #  # Nodes are in a replica set
+  #  #replSet            => "example_set_name",
+  #  # Increase number of available mongodb connections
+  #  ulimit_nofile       => 20000,
+  #  #mongod_add_options => ['smallfiles', 'oplogSize 10', 'directoryperdb']   @todo need these on dev
+  #}
 }
